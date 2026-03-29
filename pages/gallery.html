@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View Unique Counts' portfolio of completed stone projects. Browse our gallery of granite, marble, quartz countertops, epoxy flooring, and more in Pretoria.">
+    <meta name="keywords" content="stone gallery, granite countertops, marble vanities, epoxy flooring, Pretoria, completed projects">
+    <title>Project Gallery | Unique Counts Pty Ltd - Our Work</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="../index.html" class="logo">UNIQUE <span>COUNTS</span></a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="about.html">About Us <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html#story">Our Story</a></li>
+                            <li><a href="about.html#procedures">Procedures</a></li>
+                            <li><a href="about.html#ownership">Ownership</a></li>
+                            <li><a href="about.html#management">Management</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="graphite.html">Graphite Work</a></li>
+                            <li><a href="waterproofing.html">Waterproofing</a></li>
+                            <li><a href="epoxy.html">Epoxy Flooring</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span>/</span>
+                    <span>Gallery</span>
+                </div>
+                <h1>Our Project Gallery</h1>
+                <p>Explore our portfolio of completed projects showcasing our craftsmanship and attention to detail.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <!-- Filter Section -->
+        <section class="section" style="padding-bottom: 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Browse by <span>Category</span></h2>
+                    <p>Filter our projects by service type to find inspiration for your own space.</p>
+                </div>
+                
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
+                    <button class="btn btn-primary gallery-filter active" data-filter="all">
+                        <i class="fas fa-th"></i> All Projects
+                    </button>
+                    <button class="btn btn-secondary gallery-filter" data-filter="countertops">
+                        <i class="fas fa-utensils"></i> Countertops
+                    </button>
+                    <button class="btn btn-secondary gallery-filter" data-filter="bathroom">
+                        <i class="fas fa-bath"></i> Bathroom
+                    </button>
+                    <button class="btn btn-secondary gallery-filter" data-filter="epoxy">
+                        <i class="fas fa-th-large"></i> Epoxy
+                    </button>
+                    <button class="btn btn-secondary gallery-filter" data-filter="graphite">
+                        <i class="fas fa-layer-group"></i> Graphite
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="section" style="padding-top: 40px;">
+            <div class="container">
+                <div class="gallery-grid">
+                    <!-- Countertops -->
+                    <div class="gallery-item animate-on-scroll" data-category="countertops">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Granite Kitchen Countertop">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Granite Kitchen Countertop</h4>
+                                <p>Kitchen Countertops</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="countertops">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Modern Kitchen Island">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Modern Kitchen Island</h4>
+                                <p>Kitchen Countertops</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="bathroom">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Marble Bathroom Vanity">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Elegant Marble Vanity</h4>
+                                <p>Bathroom Vanities</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="epoxy">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Epoxy Garage Floor">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Metallic Epoxy Floor</h4>
+                                <p>Epoxy Flooring</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="countertops">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Quartz Kitchen Countertop">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Quartz White Countertop</h4>
+                                <p>Kitchen Countertops</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="graphite">
+                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Fireplace Surround">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Graphite Fireplace</h4>
+                                <p>Graphite Work</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="bathroom">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Walk-in Shower">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Stone-Clad Shower</h4>
+                                <p>Bathroom Remodeling</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="epoxy">
+                        <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Commercial Epoxy Floor">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Industrial Epoxy Coating</h4>
+                                <p>Epoxy Flooring</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="countertops">
+                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Breakfast Bar">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Granite Breakfast Bar</h4>
+                                <p>Kitchen Countertops</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Load More -->
+                <div style="text-align: center; margin-top: 50px;">
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Showing 9 of 50+ projects</p>
+                    <button class="btn btn-primary" id="loadMoreBtn">
+                        <i class="fas fa-plus"></i> Load More Projects
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Showcase -->
+        <section class="section section-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured <span>Project</span></h2>
+                    <p>A closer look at one of our recent transformations.</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-img" style="border-radius: var(--border-radius); overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Featured Project">
+                    </div>
+                    <div class="about-text">
+                        <h3>Pretoria Gardens Kitchen Transformation</h3>
+                        <p>This stunning kitchen renovation showcases premium granite countertops with a waterfall edge design. The homeowners wanted a modern look that would withstand daily use while adding value to their home.</p>
+                        <p>Our team handled everything from precise templating to the final installation, ensuring perfect fit around the sink, cooktop, and integrated lighting features.</p>
+                        
+                        <div class="about-stats" style="grid-template-columns: repeat(2, 1fr); margin-top: 30px;">
+                            <div class="stat-item">
+                                <div class="number">3</div>
+                                <div class="label">Days Installation</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="number">5m²</div>
+                                <div class="label">Surface Area</div>
+                            </div>
+                        </div>
+                        
+                        <a href="contact.html" class="btn btn-primary" style="margin-top: 30px;">
+                            <i class="fas fa-calendar-check"></i> Start Your Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Before & After Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Transformations</h2>
+                    <p>See the dramatic difference our work makes.</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div class="card animate-on-scroll" style="overflow: hidden; padding: 0;">
+                        <div style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%); padding: 20px; text-align: center; color: white;">
+                            <h4 style="color: white; margin: 0;">Before</h4>
+                        </div>
+                        <div style="padding: 20px; text-align: center;">
+                            <i class="fas fa-image" style="font-size: 4rem; color: var(--medium-gray); margin-bottom: 15px;"></i>
+                            <p style="margin: 0;">Outdated surfaces and worn countertops</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card animate-on-scroll" style="overflow: hidden; padding: 0;">
+                        <div style="background: linear-gradient(135deg, var(--accent-green) 0%, #1e7e34 100%); padding: 20px; text-align: center; color: white;">
+                            <h4 style="color: white; margin: 0;">After</h4>
+                        </div>
+                        <div style="padding: 20px; text-align: center;">
+                            <i class="fas fa-star" style="font-size: 4rem; color: var(--primary-blue); margin-bottom: 15px;"></i>
+                            <p style="margin: 0;">Stunning new stone surfaces</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card animate-on-scroll" style="overflow: hidden; padding: 0;">
+                        <div style="background: linear-gradient(135deg, var(--accent-gold) 0%, #b8860b 100%); padding: 20px; text-align: center; color: white;">
+                            <h4 style="color: white; margin: 0;">Result</h4>
+                        </div>
+                        <div style="padding: 20px; text-align: center;">
+                            <i class="fas fa-heart" style="font-size: 4rem; color: #e91e63; margin-bottom: 15px;"></i>
+                            <p style="margin: 0;">Happy homeowners, increased property value</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section section-dark">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Our <span>Clients Say</span></h2>
+                    <p>Real feedback from satisfied customers.</p>
+                </div>
+                
+                <div class="services-grid services-grid-2">
+                    <div class="card animate-on-scroll" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                        <div style="color: var(--accent-gold); margin-bottom: 15px;">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p style="color: rgba(255,255,255,0.9); font-style: italic; margin-bottom: 20px;">"Unique Counts transformed our outdated kitchen into a stunning space. The granite countertop is absolutely gorgeous, and the installation was flawless. Highly recommended!"</p>
+                        <p style="color: var(--white); margin: 0; font-weight: 600;">— Sarah M., Pretoria Gardens</p>
+                    </div>
+                    
+                    <div class="card animate-on-scroll" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                        <div style="color: var(--accent-gold); margin-bottom: 15px;">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p style="color: rgba(255,255,255,0.9); font-style: italic; margin-bottom: 20px;">"Professional, punctual, and excellent quality. The epoxy garage floor looks amazing and has held up perfectly. Great value for money!"</p>
+                        <p style="color: var(--white); margin: 0; font-weight: 600;">— Johan K., Centurion</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Create Your Dream Space?</h2>
+                    <p>Let us transform your property like we've done for hundreds of satisfied customers.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-secondary">
+                            <i class="fas fa-calendar-check"></i> Schedule Consultation
+                        </a>
+                        <a href="https://wa.me/27607359013?text=Hi%2C%20I%20saw%20your%20gallery%20and%20I%27m%20interested%20in%20a%20project" target="_blank" class="btn btn-outline">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>About Unique Counts</h3>
+                    <p>UNIQUE COUNTS PTY LTD is a 100% black-owned small business established in 2025. We specialize in cutting, processing, designing, and installing premium stone products.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html#home">Home</a></li>
+                        <li><a href="../index.html#about">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="graphite.html">Graphite Work</a></li>
+                        <li><a href="waterproofing.html">Waterproofing</a></li>
+                        <li><a href="epoxy.html">Epoxy Flooring</a></li>
+                        <li><a href="services.html">Custom Design</a></li>
+                        <li><a href="services.html">Stone Installation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 326 Bremer Street, Pretoria Gardens</li>
+                        <li><i class="fas fa-phone"></i> +27 60 735 9013</li>
+                        <li><i class="fas fa-envelope"></i> Uniquecounts1@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Unique Counts Pty Ltd. All rights reserved. | Website designed & developed by <a href="https://www.linkedin.com/in/wiseman-mthethwa-971127359/" target="_blank">Wiseman Mthethwa</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

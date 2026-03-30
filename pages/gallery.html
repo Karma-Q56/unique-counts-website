@@ -22,19 +22,11 @@
             <nav id="nav">
                 <ul>
                     <li><a href="../index.html#home">Home</a></li>
-                    <li class="dropdown">
-                        <a href="about.html">About Us <i class="fas fa-chevron-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="about.html#story">Our Story</a></li>
-                            <li><a href="about.html#procedures">Procedures</a></li>
-                            <li><a href="about.html#ownership">Ownership</a></li>
-                            <li><a href="about.html#management">Management</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="about.html">About Us</a></li>
                     <li class="dropdown">
                         <a href="services.html">Services <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="graphite.html">Graphite Work</a></li>
+                            <li><a href="granite.html">Granite Work</a></li>
                             <li><a href="waterproofing.html">Waterproofing</a></li>
                             <li><a href="epoxy.html">Epoxy Flooring</a></li>
                         </ul>
@@ -75,17 +67,20 @@
                     <button class="btn btn-primary gallery-filter active" data-filter="all">
                         <i class="fas fa-th"></i> All Projects
                     </button>
-                    <button class="btn btn-secondary gallery-filter" data-filter="countertops">
-                        <i class="fas fa-utensils"></i> Countertops
+                    <button class="btn btn-secondary gallery-filter" data-filter="kitchen">
+                        <i class="fas fa-utensils"></i> Kitchen
                     </button>
                     <button class="btn btn-secondary gallery-filter" data-filter="bathroom">
                         <i class="fas fa-bath"></i> Bathroom
                     </button>
+                    <button class="btn btn-secondary gallery-filter" data-filter="livingroom">
+                        <i class="fas fa-couch"></i> Living Room
+                    </button>
                     <button class="btn btn-secondary gallery-filter" data-filter="epoxy">
                         <i class="fas fa-th-large"></i> Epoxy
                     </button>
-                    <button class="btn btn-secondary gallery-filter" data-filter="graphite">
-                        <i class="fas fa-layer-group"></i> Graphite
+                    <button class="btn btn-secondary gallery-filter" data-filter="waterproofing">
+                        <i class="fas fa-tint"></i> Waterproofing
                     </button>
                 </div>
             </div>
@@ -95,39 +90,42 @@
         <section class="section" style="padding-top: 40px;">
             <div class="container">
                 <div class="gallery-grid">
-                    <!-- Countertops -->
-                    <div class="gallery-item animate-on-scroll" data-category="countertops">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Granite Kitchen Countertop">
+                    <!-- Kitchen Projects -->
+                    <div class="gallery-item animate-on-scroll" data-category="kitchen">
+                        <img src="../assets/images/Gallery/Kitchen/img01.jpg" alt="Kitchen Countertop">
                         <div class="gallery-overlay">
                             <div>
                                 <h4>Granite Kitchen Countertop</h4>
-                                <p>Kitchen Countertops</p>
+                                <p>Kitchen Project</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="gallery-item animate-on-scroll" data-category="countertops">
-                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Modern Kitchen Island">
-                        <div class="gallery-overlay">
-                            <div>
-                                <h4>Modern Kitchen Island</h4>
-                                <p>Kitchen Countertops</p>
-                            </div>
-                        </div>
-                    </div>
-                    
+                    <!-- Bathroom Projects -->
                     <div class="gallery-item animate-on-scroll" data-category="bathroom">
-                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Marble Bathroom Vanity">
+                        <img src="../assets/images/Gallery/Bathroom/img7.jpg" alt="Bathroom Vanity">
                         <div class="gallery-overlay">
                             <div>
-                                <h4>Elegant Marble Vanity</h4>
-                                <p>Bathroom Vanities</p>
+                                <h4>Bathroom Vanity</h4>
+                                <p>Bathroom Project</p>
                             </div>
                         </div>
                     </div>
                     
+                    <!-- Living Room Projects -->
+                    <div class="gallery-item animate-on-scroll" data-category="livingroom">
+                        <img src="../assets/images/Gallery/Living room/img4.jpg" alt="Living Room Countertop">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Living Room Countertop</h4>
+                                <p>Living Room Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Epoxy Projects -->
                     <div class="gallery-item animate-on-scroll" data-category="epoxy">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Epoxy Garage Floor">
+                        <img src="../assets/images/Gallery/Epoxy/metallicfloorcoating1.webp" alt="Metallic Epoxy Floor">
                         <div class="gallery-overlay">
                             <div>
                                 <h4>Metallic Epoxy Floor</h4>
@@ -136,52 +134,540 @@
                         </div>
                     </div>
                     
-                    <div class="gallery-item animate-on-scroll" data-category="countertops">
-                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Quartz Kitchen Countertop">
+                    <!-- Waterproofing Projects -->
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.13.52 AM (1).jpeg" alt="Waterproofing Project">
                         <div class="gallery-overlay">
                             <div>
-                                <h4>Quartz White Countertop</h4>
-                                <p>Kitchen Countertops</p>
+                                <h4>Waterproofing Solution</h4>
+                                <p>Waterproofing Project</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="gallery-item animate-on-scroll" data-category="graphite">
-                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Fireplace Surround">
+                    <!-- More Kitchen Projects -->
+                    <div class="gallery-item animate-on-scroll" data-category="kitchen">
+                        <img src="../assets/images/Gallery/Kitchen/img2.jpg" alt="Kitchen Island">
                         <div class="gallery-overlay">
                             <div>
-                                <h4>Graphite Fireplace</h4>
-                                <p>Graphite Work</p>
+                                <h4>Modern Kitchen Island</h4>
+                                <p>Kitchen Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="kitchen">
+                        <img src="../assets/images/Gallery/Kitchen/img3.jpg" alt="Kitchen Countertop">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Premium Kitchen Countertop</h4>
+                                <p>Kitchen Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="kitchen">
+                        <img src="../assets/images/Gallery/Kitchen/img5.jpg" alt="Kitchen Countertop">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Elegant Kitchen Design</h4>
+                                <p>Kitchen Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="kitchen">
+                        <img src="../assets/images/Gallery/Kitchen/img10.jpg" alt="Kitchen Countertop">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Luxury Kitchen Countertop</h4>
+                                <p>Kitchen Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="kitchen">
+                        <img src="../assets/images/Gallery/Kitchen/img02.jpg" alt="Kitchen Countertop">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Custom Kitchen Countertop</h4>
+                                <p>Kitchen Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="kitchen">
+                        <img src="../assets/images/Gallery/Kitchen/il_794xN.1785089066_iia5.jpg" alt="Kitchen Countertop">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Designer Kitchen Countertop</h4>
+                                <p>Kitchen Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="kitchen">
+                        <img src="../assets/images/Gallery/Kitchen/WhatsApp Image 2025-07-15 at 17.05.46_d6158560.jpg" alt="Kitchen Countertop">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Modern Kitchen Design</h4>
+                                <p>Kitchen Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="kitchen">
+                        <img src="../assets/images/Gallery/Kitchen/WhatsApp Image 2026-03-30 at 10.14.11 AM.jpeg" alt="Kitchen Countertop">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Contemporary Kitchen</h4>
+                                <p>Kitchen Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="kitchen">
+                        <img src="../assets/images/Gallery/Kitchen/WhatsApp Image 2026-03-30 at 10.14.12 AM (1).jpeg" alt="Kitchen Countertop">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Elegant Kitchen Surface</h4>
+                                <p>Kitchen Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="kitchen">
+                        <img src="../assets/images/Gallery/Kitchen/WhatsApp Image 2026-03-30 at 10.14.12 AM.jpeg" alt="Kitchen Countertop">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Premium Kitchen Installation</h4>
+                                <p>Kitchen Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="kitchen">
+                        <img src="../assets/images/Gallery/Kitchen/WhatsApp Image 2026-03-30 at 10.14.14 AM.jpeg" alt="Kitchen Countertop">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Stylish Kitchen Countertop</h4>
+                                <p>Kitchen Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="kitchen">
+                        <img src="../assets/images/Gallery/Kitchen/WhatsApp Image 2026-03-30 at 10.14.15 AM.jpeg" alt="Kitchen Countertop">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Luxury Kitchen Design</h4>
+                                <p>Kitchen Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bathroom Projects -->
+                    <div class="gallery-item animate-on-scroll" data-category="bathroom">
+                        <img src="../assets/images/Gallery/Bathroom/img8.jpg" alt="Bathroom Countertop">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Modern Bathroom Countertop</h4>
+                                <p>Bathroom Project</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="gallery-item animate-on-scroll" data-category="bathroom">
-                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Walk-in Shower">
+                        <img src="../assets/images/Gallery/Bathroom/img9.jpg" alt="Bathroom Design">
                         <div class="gallery-overlay">
                             <div>
-                                <h4>Stone-Clad Shower</h4>
-                                <p>Bathroom Remodeling</p>
+                                <h4>Stone Bathroom Design</h4>
+                                <p>Bathroom Project</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="gallery-item animate-on-scroll" data-category="epoxy">
-                        <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Commercial Epoxy Floor">
+                    <div class="gallery-item animate-on-scroll" data-category="bathroom">
+                        <img src="../assets/images/Gallery/Bathroom/img13.jpg" alt="Bathroom Countertop">
                         <div class="gallery-overlay">
                             <div>
-                                <h4>Industrial Epoxy Coating</h4>
+                                <h4>Elegant Bathroom Countertop</h4>
+                                <p>Bathroom Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Living Room Projects -->
+                    <div class="gallery-item animate-on-scroll" data-category="livingroom">
+                        <img src="../assets/images/Gallery/Living room/img4.jpg" alt="Living Room Countertop">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Living Room Countertop</h4>
+                                <p>Living Room Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="livingroom">
+                        <img src="../assets/images/Gallery/Living room/img6.jpg" alt="Living Room Design">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Modern Living Room Design</h4>
+                                <p>Living Room Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="livingroom">
+                        <img src="../assets/images/Gallery/Living room/WhatsApp Image 2025-07-17 at 11.37.03_daad30ee.jpg" alt="Living Room Design">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Contemporary Living Room</h4>
+                                <p>Living Room Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="livingroom">
+                        <img src="../assets/images/Gallery/Living room/WhatsApp Image 2026-03-30 at 10.14.01 AM.jpeg" alt="Living Room Design">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Elegant Living Room</h4>
+                                <p>Living Room Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Epoxy Projects -->
+                    <div class="gallery-item animate-on-scroll" data-category="epoxy">
+                        <img src="../assets/images/Gallery/Epoxy/metallicfloorcoating1.webp" alt="Metallic Epoxy Floor">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Metallic Epoxy Floor</h4>
                                 <p>Epoxy Flooring</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="gallery-item animate-on-scroll" data-category="countertops">
-                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Breakfast Bar">
+                    <div class="gallery-item animate-on-scroll" data-category="epoxy">
+                        <img src="../assets/images/Gallery/Epoxy/springfield-ma-metallic-epoxy-floors.png" alt="Commercial Epoxy Floor">
                         <div class="gallery-overlay">
                             <div>
-                                <h4>Granite Breakfast Bar</h4>
-                                <p>Kitchen Countertops</p>
+                                <h4>Commercial Epoxy Coating</h4>
+                                <p>Epoxy Flooring</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="epoxy">
+                        <img src="../assets/images/Gallery/Epoxy/grey_metallic_epoxy_1l-1--e1595877364669.jpg" alt="Grey Epoxy Floor">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Grey Metallic Epoxy</h4>
+                                <p>Epoxy Flooring</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="epoxy">
+                        <img src="../assets/images/Gallery/Epoxy/Glam-Epoxy-img-13.jpeg" alt="Glam Epoxy Floor">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Glamorous Epoxy Finish</h4>
+                                <p>Epoxy Flooring</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="epoxy">
+                        <img src="../assets/images/Gallery/Epoxy/images.jpg" alt="Epoxy Floor">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Classic Epoxy Floor</h4>
+                                <p>Epoxy Flooring</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="epoxy">
+                        <img src="../assets/images/Gallery/Epoxy/WhatsApp Image 2026-03-30 at 10.13.57 AM (1).jpeg" alt="Epoxy Floor">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Modern Epoxy Coating</h4>
+                                <p>Epoxy Flooring</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="epoxy">
+                        <img src="../assets/images/Gallery/Epoxy/WhatsApp Image 2026-03-30 at 10.13.57 AM.jpeg" alt="Epoxy Floor">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Premium Epoxy Finish</h4>
+                                <p>Epoxy Flooring</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="epoxy">
+                        <img src="../assets/images/Gallery/Epoxy/WhatsApp Image 2026-03-30 at 10.13.59 AM.jpeg" alt="Epoxy Floor">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Industrial Epoxy Floor</h4>
+                                <p>Epoxy Flooring</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="epoxy">
+                        <img src="../assets/images/Gallery/Epoxy/WhatsApp Image 2026-03-30 at 10.14.00 AM (1).jpeg" alt="Epoxy Floor">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Decorative Epoxy Floor</h4>
+                                <p>Epoxy Flooring</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="epoxy">
+                        <img src="../assets/images/Gallery/Epoxy/WhatsApp Image 2026-03-30 at 10.14.00 AM.jpeg" alt="Epoxy Floor">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>High-Gloss Epoxy Floor</h4>
+                                <p>Epoxy Flooring</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Waterproofing Projects -->
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.13.52 AM (1).jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Solution</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.13.52 AM.jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Professional Waterproofing</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.13.53 AM (1).jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Application</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.13.53 AM.jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Installation</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.13.54 AM.jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Service</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.13.55 AM (1).jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Work</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.13.55 AM.jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Project</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.13.56 AM (1).jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Solution</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.13.56 AM.jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Professional Waterproofing</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.13.58 AM (1).jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Application</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.13.58 AM.jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Installation</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.14.02 AM (1).jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Service</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.14.02 AM.jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Work</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.14.03 AM.jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Project</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.14.04 AM (1).jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Solution</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.14.04 AM.jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Professional Waterproofing</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.14.05 AM (1).jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Application</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.14.05 AM.jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Installation</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.14.06 AM.jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Service</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.14.07 AM (1).jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Work</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.14.07 AM.jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Project</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.14.08 AM.jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Waterproofing Solution</h4>
+                                <p>Waterproofing Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item animate-on-scroll" data-category="waterproofing">
+                        <img src="../assets/images/Gallery/Waterproofing/WhatsApp Image 2026-03-30 at 10.14.09 AM.jpeg" alt="Waterproofing Project">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4>Professional Waterproofing</h4>
+                                <p>Waterproofing Project</p>
                             </div>
                         </div>
                     </div>
@@ -189,7 +675,7 @@
                 
                 <!-- Load More -->
                 <div style="text-align: center; margin-top: 50px;">
-                    <p style="color: var(--text-muted); margin-bottom: 20px;">Showing 9 of 50+ projects</p>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Showing 6 of 58 projects</p>
                     <button class="btn btn-primary" id="loadMoreBtn">
                         <i class="fas fa-plus"></i> Load More Projects
                     </button>
@@ -207,7 +693,7 @@
                 
                 <div class="about-content">
                     <div class="about-img" style="border-radius: var(--border-radius); overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Featured Project">
+                        <img src="../assets/images/Gallery/Kitchen/img1.jpg" alt="Featured Project">
                     </div>
                     <div class="about-text">
                         <h3>Pretoria Gardens Kitchen Transformation</h3>
@@ -228,48 +714,6 @@
                         <a href="contact.html" class="btn btn-primary" style="margin-top: 30px;">
                             <i class="fas fa-calendar-check"></i> Start Your Project
                         </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Before & After Section -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Transformations</h2>
-                    <p>See the dramatic difference our work makes.</p>
-                </div>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                    <div class="card animate-on-scroll" style="overflow: hidden; padding: 0;">
-                        <div style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%); padding: 20px; text-align: center; color: white;">
-                            <h4 style="color: white; margin: 0;">Before</h4>
-                        </div>
-                        <div style="padding: 20px; text-align: center;">
-                            <i class="fas fa-image" style="font-size: 4rem; color: var(--medium-gray); margin-bottom: 15px;"></i>
-                            <p style="margin: 0;">Outdated surfaces and worn countertops</p>
-                        </div>
-                    </div>
-                    
-                    <div class="card animate-on-scroll" style="overflow: hidden; padding: 0;">
-                        <div style="background: linear-gradient(135deg, var(--accent-green) 0%, #1e7e34 100%); padding: 20px; text-align: center; color: white;">
-                            <h4 style="color: white; margin: 0;">After</h4>
-                        </div>
-                        <div style="padding: 20px; text-align: center;">
-                            <i class="fas fa-star" style="font-size: 4rem; color: var(--primary-blue); margin-bottom: 15px;"></i>
-                            <p style="margin: 0;">Stunning new stone surfaces</p>
-                        </div>
-                    </div>
-                    
-                    <div class="card animate-on-scroll" style="overflow: hidden; padding: 0;">
-                        <div style="background: linear-gradient(135deg, var(--accent-gold) 0%, #b8860b 100%); padding: 20px; text-align: center; color: white;">
-                            <h4 style="color: white; margin: 0;">Result</h4>
-                        </div>
-                        <div style="padding: 20px; text-align: center;">
-                            <i class="fas fa-heart" style="font-size: 4rem; color: #e91e63; margin-bottom: 15px;"></i>
-                            <p style="margin: 0;">Happy homeowners, increased property value</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -357,7 +801,7 @@
                 <div class="footer-col">
                     <h3>Our Services</h3>
                     <ul>
-                        <li><a href="graphite.html">Graphite Work</a></li>
+                        <li><a href="granite.html">Granite Work</a></li>
                         <li><a href="waterproofing.html">Waterproofing</a></li>
                         <li><a href="epoxy.html">Epoxy Flooring</a></li>
                         <li><a href="services.html">Custom Design</a></li>

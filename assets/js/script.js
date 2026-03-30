@@ -237,11 +237,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get form values
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
             const message = document.getElementById('message').value.trim();
             
             // Basic validation
             if (!name || !email || !message) {
-                showNotification('Please fill in all fields', 'error');
+                showNotification('Please fill in all required fields', 'error');
                 return;
             }
             
@@ -252,18 +254,44 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Simulate form submission
+            // Prepare form data for submission
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('phone', phone);
+            formData.append('service', service);
+            formData.append('message', message);
+            formData.append('_subject', 'New Contact Form Submission - Unique Counts');
+            
+            // Show loading state
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
             
-            setTimeout(() => {
-                showNotification('Thank you! Your message has been sent successfully.', 'success');
-                contactForm.reset();
+            // Send form data to Formspree (configured to send to Uniquecounts1@gmail.com)
+            fetch('https://formspree.io/f/xdkopzqw', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    showNotification('Thank you! Your message has been sent successfully. We will get back to you within 24 hours.', 'success');
+                    contactForm.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                showNotification('Sorry, there was an error sending your message. Please try again or contact us directly at Uniquecounts1@gmail.com', 'error');
+            })
+            .finally(() => {
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
-            }, 1500);
+            });
         });
     }
     
@@ -475,6 +503,102 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
     
+});
+
+// ========== GALLERY FILTER & LOAD MORE ==========
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.gallery-filter');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    let visibleCount = 6;
+    const increment = 6;
+
+    // Initialize gallery - show only first 6 items
+    function initializeGallery() {
+        galleryItems.forEach((item, index) => {
+            if (index < visibleCount) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+        updateLoadMoreButton();
+    }
+
+    // Update load more button visibility
+    function updateLoadMoreButton() {
+        if (loadMoreBtn) {
+            const totalItems = galleryItems.length;
+            loadMoreBtn.style.display = visibleCount >= totalItems ? 'none' : 'inline-block';
+        }
+    }
+
+    // Initialize on page load
+    initializeGallery();
+
+    // Gallery Filter
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            const filter = this.dataset.filter;
+            let count = 0;
+
+            galleryItems.forEach(item => {
+                const category = item.dataset.category;
+                
+                if (filter === 'all' || category === filter) {
+                    item.style.display = 'block';
+                    count++;
+                    if (count <= visibleCount) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Reset visible count when filter changes
+            visibleCount = 6;
+            
+            // Update button visibility
+            if (loadMoreBtn) {
+                const visibleItems = Array.from(galleryItems).filter(item => {
+                    return item.style.display !== 'none';
+                });
+                loadMoreBtn.style.display = visibleItems.length > visibleCount ? 'inline-block' : 'none';
+            }
+        });
+    });
+
+    // Load More Button
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function() {
+            visibleCount += increment;
+            
+            const activeFilter = document.querySelector('.gallery-filter.active');
+            const filter = activeFilter ? activeFilter.dataset.filter : 'all';
+            let visibleItems = 0;
+
+            galleryItems.forEach(item => {
+                const category = item.dataset.category;
+                
+                if (filter === 'all' || category === filter) {
+                    visibleItems++;
+                    if (visibleItems <= visibleCount) {
+                        item.style.display = 'block';
+                    }
+                }
+            });
+
+            // Update button visibility
+            updateLoadMoreButton();
+        });
+    }
 });
 
 // ========== UTILITY FUNCTIONS ==========

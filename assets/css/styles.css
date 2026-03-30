@@ -395,7 +395,7 @@ nav ul li a.active {
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, rgba(10, 61, 98, 0.75) 0%, rgba(10, 61, 98, 0.4) 100%),
-                url('assets/images/hero-kitchen.jpg') no-repeat center center/cover;
+                url('../images/img11.jpg') no-repeat center center/cover;
     color: var(--white);
     padding-top: 80px;
 }
@@ -447,7 +447,7 @@ nav ul li a.active {
     min-height: 50vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, rgba(10, 61, 98, 0.85) 0%, rgba(0, 86, 179, 0.7) 100%),
+    background: linear-gradient(135deg, rgba(10, 61, 98, 0.7) 0%, rgba(0, 86, 179, 0.3) 100%),
                 url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
     color: var(--white);
     padding-top: 80px;
@@ -1022,6 +1022,11 @@ nav ul li a.active {
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.9rem;
     margin: 0;
+}
+
+/* Gallery Pagination */
+.gallery-item.hidden {
+    display: none;
 }
 
 /* Gallery Slider (for home page preview) */
@@ -1994,6 +1999,65 @@ footer {
     line-height: 1.7;
 }
 
+/* ============ LARGE DESKTOP (Above 1400px) ============ */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .hero h1 {
+        font-size: 4.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.4rem;
+    }
+    
+    .page-hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2.8rem;
+    }
+    
+    .services-grid {
+        gap: 35px;
+    }
+    
+    .why-grid {
+        gap: 35px;
+    }
+    
+    .process-grid {
+        gap: 35px;
+    }
+    
+    .gallery-grid {
+        gap: 25px;
+    }
+    
+    .testimonials-grid {
+        gap: 35px;
+    }
+    
+    .about-stats {
+        gap: 35px;
+    }
+    
+    .management-grid {
+        gap: 35px;
+    }
+    
+    .mission-content {
+        gap: 45px;
+    }
+    
+    .footer-container {
+        gap: 50px;
+    }
+}
+
 /* ============ RESPONSIVE DESIGN ============ */
 @media (max-width: 1200px) {
     .services-grid {
@@ -2014,6 +2078,94 @@ footer {
     
     .footer-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Hero section - better desktop optimization */
+    .hero {
+        min-height: 95vh;
+    }
+    
+    .hero-content {
+        max-width: 750px;
+    }
+    
+    /* Page hero - better desktop optimization */
+    .page-hero {
+        min-height: 50vh;
+    }
+    
+    /* Section headers - better desktop spacing */
+    .section-header {
+        margin-bottom: 55px;
+    }
+    
+    /* Cards - better desktop spacing */
+    .card {
+        padding: 28px;
+    }
+    
+    .service-card {
+        padding: 32px 28px;
+    }
+    
+    .feature-card {
+        padding: 28px;
+    }
+    
+    .why-card {
+        padding: 38px 28px;
+    }
+    
+    .process-card {
+        padding: 38px 28px;
+    }
+    
+    /* Gallery - better desktop optimization */
+    .gallery-item img {
+        height: 290px;
+    }
+    
+    .gallery-overlay {
+        padding: 19px;
+    }
+    
+    /* Testimonials - better desktop spacing */
+    .testimonial-card {
+        padding: 32px;
+    }
+    
+    /* Contact - better desktop optimization */
+    .contact-info-card,
+    .contact-form {
+        padding: 38px;
+    }
+    
+    /* Form - better desktop spacing */
+    .form-group {
+        margin-bottom: 19px;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 14px 17px;
+    }
+    
+    /* Footer - better desktop spacing */
+    .footer-col {
+        margin-bottom: 38px;
+    }
+    
+    .footer-col h3 {
+        font-size: 1.18rem;
+    }
+    
+    /* Back to top - better desktop positioning */
+    .back-to-top {
+        bottom: 28px;
+        right: 28px;
+        width: 49px;
+        height: 49px;
     }
 }
 
@@ -2044,6 +2196,105 @@ footer {
     
     .applications-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* About Stats - 2 columns on tablets */
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Gallery filter buttons - better spacing on tablets */
+    .gallery-filter {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+    
+    /* Hero section - better tablet optimization */
+    .hero {
+        min-height: 85vh;
+    }
+    
+    .hero-content {
+        max-width: 700px;
+    }
+    
+    /* Page hero - better tablet optimization */
+    .page-hero {
+        min-height: 45vh;
+    }
+    
+    /* Section headers - better tablet spacing */
+    .section-header {
+        margin-bottom: 50px;
+    }
+    
+    /* Cards - better tablet spacing */
+    .card {
+        padding: 25px;
+    }
+    
+    .service-card {
+        padding: 30px 25px;
+    }
+    
+    .feature-card {
+        padding: 25px;
+    }
+    
+    .why-card {
+        padding: 35px 25px;
+    }
+    
+    .process-card {
+        padding: 35px 25px;
+    }
+    
+    /* Gallery - better tablet optimization */
+    .gallery-item img {
+        height: 280px;
+    }
+    
+    .gallery-overlay {
+        padding: 18px;
+    }
+    
+    /* Testimonials - better tablet spacing */
+    .testimonial-card {
+        padding: 30px;
+    }
+    
+    /* Contact - better tablet optimization */
+    .contact-info-card,
+    .contact-form {
+        padding: 35px;
+    }
+    
+    /* Form - better tablet spacing */
+    .form-group {
+        margin-bottom: 18px;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 13px 16px;
+    }
+    
+    /* Footer - better tablet spacing */
+    .footer-col {
+        margin-bottom: 35px;
+    }
+    
+    .footer-col h3 {
+        font-size: 1.15rem;
+    }
+    
+    /* Back to top - better tablet positioning */
+    .back-to-top {
+        bottom: 25px;
+        right: 25px;
+        width: 48px;
+        height: 48px;
     }
 }
 
@@ -2113,10 +2364,17 @@ footer {
     .dropdown-menu li a {
         padding: 15px 20px;
         font-size: 0.95rem;
+        color: var(--accent-gold);
+    }
+    
+    .dropdown-menu li a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--white);
     }
     
     .hero {
         min-height: 90vh;
+        padding-top: 100px;
     }
     
     .hero h1 {
@@ -2217,6 +2475,35 @@ footer {
     .page-hero h1 {
         font-size: 2.2rem;
     }
+    
+    /* Gallery filter buttons - full width on mobile */
+    .gallery-filter {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Contact form - better mobile spacing */
+    .contact-form {
+        padding: 25px;
+    }
+    
+    .contact-info-card {
+        padding: 25px;
+    }
+    
+    /* Buttons - full width on mobile */
+    .btn {
+        width: 100%;
+    }
+    
+    .hero-buttons .btn {
+        width: auto;
+    }
+    
+    /* CTA buttons - stack on mobile */
+    .cta-buttons {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 576px) {
@@ -2252,6 +2539,272 @@ footer {
     
     .cta-section {
         padding: 50px 0;
+    }
+    
+    /* Hero section - better mobile optimization */
+    .hero {
+        min-height: 80vh;
+        padding-top: 120px;
+    }
+    
+    .hero-content {
+        padding: 0 10px;
+    }
+    
+    /* Page hero - better mobile optimization */
+    .page-hero {
+        min-height: 40vh;
+        padding-top: 100px;
+    }
+    
+    .page-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .page-hero p {
+        font-size: 1rem;
+    }
+    
+    /* Section headers - better mobile spacing */
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    /* Cards - better mobile spacing */
+    .card {
+        padding: 20px;
+    }
+    
+    .service-card {
+        padding: 25px 20px;
+    }
+    
+    .feature-card {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .why-card {
+        padding: 30px 20px;
+    }
+    
+    .process-card {
+        padding: 30px 20px;
+    }
+    
+    /* Gallery - better mobile optimization */
+    .gallery-item img {
+        height: 250px;
+    }
+    
+    .gallery-overlay {
+        padding: 15px;
+    }
+    
+    .gallery-overlay h4 {
+        font-size: 1rem;
+    }
+    
+    .gallery-overlay p {
+        font-size: 0.85rem;
+    }
+    
+    /* Testimonials - better mobile spacing */
+    .testimonial-card {
+        padding: 25px;
+    }
+    
+    .testimonial-text {
+        font-size: 0.95rem;
+    }
+    
+    /* Contact - better mobile optimization */
+    .contact-info-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-info-item .icon {
+        margin: 0 auto;
+    }
+    
+    /* Form - better mobile spacing */
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 12px 14px;
+    }
+    
+    /* Footer - better mobile spacing */
+    .footer-col {
+        margin-bottom: 30px;
+    }
+    
+    .footer-col h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* Back to top - better mobile positioning */
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* ============ EXTRA SMALL DEVICES (Phones, < 400px) ============ */
+@media (max-width: 400px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+    
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    
+    .hero p {
+        font-size: 0.95rem;
+    }
+    
+    .page-hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .service-card {
+        padding: 20px 15px;
+    }
+    
+    .service-card .icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-card .icon i {
+        font-size: 1.5rem;
+    }
+    
+    .feature-card {
+        padding: 15px;
+    }
+    
+    .why-card {
+        padding: 25px 15px;
+    }
+    
+    .why-card .icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .why-card .icon i {
+        font-size: 2rem;
+    }
+    
+    .process-card {
+        padding: 25px 15px;
+    }
+    
+    .process-card .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .gallery-item img {
+        height: 200px;
+    }
+    
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    .testimonial-text {
+        font-size: 0.9rem;
+    }
+    
+    .contact-info-card,
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .contact-info-item {
+        margin-bottom: 20px;
+    }
+    
+    .contact-info-item .icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .contact-info-item .icon i {
+        font-size: 1rem;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+    
+    .stat-item {
+        padding: 15px;
+    }
+    
+    .stat-item .number {
+        font-size: 2rem;
+    }
+    
+    .stat-item .label {
+        font-size: 0.85rem;
+    }
+    
+    .footer-col {
+        margin-bottom: 25px;
+    }
+    
+    .footer-col h3 {
+        font-size: 1rem;
+    }
+    
+    .footer-col p,
+    .footer-col ul li {
+        font-size: 0.9rem;
+    }
+    
+    .back-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
     }
 }
 

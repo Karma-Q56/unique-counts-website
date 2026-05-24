@@ -254,14 +254,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Prepare form data for submission
-            const formData = new FormData();
-            formData.append('name', name);
-            formData.append('email', email);
-            formData.append('phone', phone);
-            formData.append('service', service);
-            formData.append('message', message);
-            formData.append('_subject', 'New Contact Form Submission - Unique Counts');
+            // Prepare email parameters for EmailJS
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                phone: phone || 'Not provided',
+                service: service || 'Not specified',
+                message: message,
+                to_email: 'mavusoqm2@gmail.com'
+            };
             
             // Show loading state
             const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -269,29 +270,18 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
             
-            // Send form data to Formspree (configured to send to Uniquecounts1@gmail.com)
-            fetch('https://formspree.io/f/xdkopzqw', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
+            // Send email using EmailJS
+            emailjs.send('service_uniquecounts', 'template_contact', templateParams)
+                .then(function(response) {
                     showNotification('Thank you! Your message has been sent successfully. We will get back to you within 24 hours.', 'success');
                     contactForm.reset();
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            })
-            .catch(error => {
-                showNotification('Sorry, there was an error sending your message. Please try again or contact us directly at Uniquecounts1@gmail.com', 'error');
-            })
-            .finally(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            });
+                }, function(error) {
+                    showNotification('Sorry, there was an error sending your message. Please try again or contact us directly at mavusoqm2@gmail.com', 'error');
+                })
+                .finally(function() {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                });
         });
     }
     
@@ -508,97 +498,66 @@ document.addEventListener('DOMContentLoaded', function() {
 // ========== GALLERY FILTER & LOAD MORE ==========
 document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.gallery-filter');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    const allGalleryItems = Array.from(document.querySelectorAll('.gallery-item'));
     const loadMoreBtn = document.getElementById('loadMoreBtn');
-    let visibleCount = 6;
-    const increment = 6;
+    const countText = document.querySelector('.load-more-count');
+    const INCREMENT = 6;
 
-    // Initialize gallery - show only first 6 items
-    function initializeGallery() {
-        galleryItems.forEach((item, index) => {
-            if (index < visibleCount) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-        updateLoadMoreButton();
+    let currentFilter = 'all';
+    let currentlyShown = 0;
+
+    // Get items matching the current filter (no duplicates - just the real DOM list)
+    function getFilteredItems() {
+        if (currentFilter === 'all') return allGalleryItems;
+        return allGalleryItems.filter(item => item.dataset.category === currentFilter);
     }
 
-    // Update load more button visibility
-    function updateLoadMoreButton() {
+    // Render gallery: hide all, then show first `currentlyShown` of filtered set
+    function renderGallery() {
+        const filtered = getFilteredItems();
+
+        // Hide everything first
+        allGalleryItems.forEach(item => { item.style.display = 'none'; });
+
+        // Show only up to currentlyShown from the filtered list
+        const toShow = Math.min(currentlyShown, filtered.length);
+        for (let i = 0; i < toShow; i++) {
+            filtered[i].style.display = 'block';
+        }
+
+        // Update count text
+        if (countText) {
+            countText.textContent = `Showing ${toShow} of ${filtered.length} projects`;
+        }
+
+        // Show/hide load more button
         if (loadMoreBtn) {
-            const totalItems = galleryItems.length;
-            loadMoreBtn.style.display = visibleCount >= totalItems ? 'none' : 'inline-block';
+            loadMoreBtn.style.display = toShow < filtered.length ? 'inline-block' : 'none';
         }
     }
 
-    // Initialize on page load
-    initializeGallery();
-
-    // Gallery Filter
+    // Filter button clicks
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Update active button
             filterButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
-
-            const filter = this.dataset.filter;
-            let count = 0;
-
-            galleryItems.forEach(item => {
-                const category = item.dataset.category;
-                
-                if (filter === 'all' || category === filter) {
-                    item.style.display = 'block';
-                    count++;
-                    if (count <= visibleCount) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-
-            // Reset visible count when filter changes
-            visibleCount = 6;
-            
-            // Update button visibility
-            if (loadMoreBtn) {
-                const visibleItems = Array.from(galleryItems).filter(item => {
-                    return item.style.display !== 'none';
-                });
-                loadMoreBtn.style.display = visibleItems.length > visibleCount ? 'inline-block' : 'none';
-            }
+            currentFilter = this.dataset.filter;
+            currentlyShown = INCREMENT; // reset to first page
+            renderGallery();
         });
     });
 
-    // Load More Button
+    // Load More button click
     if (loadMoreBtn) {
         loadMoreBtn.addEventListener('click', function() {
-            visibleCount += increment;
-            
-            const activeFilter = document.querySelector('.gallery-filter.active');
-            const filter = activeFilter ? activeFilter.dataset.filter : 'all';
-            let visibleItems = 0;
-
-            galleryItems.forEach(item => {
-                const category = item.dataset.category;
-                
-                if (filter === 'all' || category === filter) {
-                    visibleItems++;
-                    if (visibleItems <= visibleCount) {
-                        item.style.display = 'block';
-                    }
-                }
-            });
-
-            // Update button visibility
-            updateLoadMoreButton();
+            currentlyShown += INCREMENT;
+            renderGallery();
         });
     }
+
+    // Initial load
+    currentlyShown = INCREMENT;
+    renderGallery();
 });
 
 // ========== UTILITY FUNCTIONS ==========

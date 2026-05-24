@@ -2299,54 +2299,39 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .hamburger {
-        display: flex;
+    
+    /* Waterproofing page mobile optimizations */
+    .applications-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
     
-    nav {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background: var(--primary-dark);
-        transition: left var(--transition-normal);
-        padding: 30px;
-        overflow-y: auto;
+    .services-grid {
+        grid-template-columns: 1fr;
     }
     
-    nav.active {
-        left: 0;
+    .process-grid {
+        grid-template-columns: 1fr;
     }
     
-    nav ul {
+    .services-grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-content {
         flex-direction: column;
-        gap: 0;
     }
     
-    nav ul li {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    .about-img {
+        margin-top: 30px;
+        text-align: center;
     }
     
-    nav ul li a {
-        display: block;
-        padding: 20px 0;
-        font-size: 1.1rem;
+    .about-img img {
+        max-width: 80%;
+        height: auto;
     }
-    
-    /* Mobile Dropdown Menu */
-    .dropdown {
-        position: relative;
-    }
-    
-    .dropdown > a {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .dropdown-menu {
-        position: static;
+}
         opacity: 1;
         visibility: visible;
         transform: none;
@@ -2668,6 +2653,24 @@ footer {
 
 /* ============ EXTRA SMALL DEVICES (Phones, < 400px) ============ */
 @media (max-width: 400px) {
+    
+    /* Waterproofing page mobile optimizations */
+    .applications-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid-2 {
+        grid-template-columns: 1fr;
+    }
     .container {
         padding: 0 15px;
     }
@@ -2825,5 +2828,40 @@ footer {
     .hero {
         min-height: auto;
         padding: 40px 0;
+    }
+}
+
+/* ===== WATERPROOFING PAGE MOBILE FIX ===== */
+@media (max-width: 768px) {
+    .applications-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .application-item {
+        padding: 20px 15px;
+    }
+
+    .application-item .icon {
+        width: 55px;
+        height: 55px;
+        margin-bottom: 12px;
+    }
+
+    .application-item h4 {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+
+    .application-item p {
+        font-size: 0.82rem;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 480px) {
+    .applications-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
     }
 }

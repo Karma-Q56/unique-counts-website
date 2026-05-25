@@ -2299,39 +2299,54 @@ footer {
 }
 
 @media (max-width: 768px) {
-    
-    /* Waterproofing page mobile optimizations */
-    .applications-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
+    .hamburger {
+        display: flex;
     }
     
-    .services-grid {
-        grid-template-columns: 1fr;
+    nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--primary-dark);
+        transition: left var(--transition-normal);
+        padding: 30px;
+        overflow-y: auto;
     }
     
-    .process-grid {
-        grid-template-columns: 1fr;
+    nav.active {
+        left: 0;
     }
     
-    .services-grid-2 {
-        grid-template-columns: 1fr;
-    }
-    
-    .about-content {
+    nav ul {
         flex-direction: column;
+        gap: 0;
     }
     
-    .about-img {
-        margin-top: 30px;
-        text-align: center;
+    nav ul li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
-    .about-img img {
-        max-width: 80%;
-        height: auto;
+    nav ul li a {
+        display: block;
+        padding: 20px 0;
+        font-size: 1.1rem;
     }
-}
+    
+    /* Mobile Dropdown Menu */
+    .dropdown {
+        position: relative;
+    }
+    
+    .dropdown > a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .dropdown-menu {
+        position: static;
         opacity: 1;
         visibility: visible;
         transform: none;
@@ -2653,24 +2668,6 @@ footer {
 
 /* ============ EXTRA SMALL DEVICES (Phones, < 400px) ============ */
 @media (max-width: 400px) {
-    
-    /* Waterproofing page mobile optimizations */
-    .applications-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .process-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .services-grid-2 {
-        grid-template-columns: 1fr;
-    }
     .container {
         padding: 0 15px;
     }
@@ -2831,37 +2828,30 @@ footer {
     }
 }
 
-/* ===== WATERPROOFING PAGE MOBILE FIX ===== */
+/* ===== WATERPROOFING MOBILE FIX ===== */
 @media (max-width: 768px) {
     .applications-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
-
     .application-item {
         padding: 20px 15px;
     }
-
-    .application-item .icon {
-        width: 55px;
-        height: 55px;
-        margin-bottom: 12px;
-    }
-
-    .application-item h4 {
-        font-size: 0.95rem;
-        margin-bottom: 8px;
-    }
-
-    .application-item p {
-        font-size: 0.82rem;
-        line-height: 1.5;
-    }
 }
-
 @media (max-width: 480px) {
     .applications-grid {
         grid-template-columns: 1fr;
-        gap: 12px;
     }
+}
+
+
+/* ===== CONTACT PAGE - CENTER & EXPAND INFO CARD ===== */
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-info-card {
+    max-width: 900px;
+    width: 100%;
 }
